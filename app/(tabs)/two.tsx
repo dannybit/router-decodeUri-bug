@@ -1,9 +1,12 @@
+import { useGlobalSearchParams, useSearchParams } from 'expo-router';
 import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 
 export default function TabTwoScreen() {
+  const { param1 }  = useGlobalSearchParams();
+  console.log("param1", param1)
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Two</Text>
